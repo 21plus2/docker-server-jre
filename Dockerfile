@@ -19,13 +19,12 @@ ENV JAVA_VERSION_MAJOR=8 \
     JAVA_CHECKSUM=42b04aeb39aeec7ba1d0ce907b2d7f56 \
     JAVA_BUNDLE_ID=e9e7ea248e2c4826b92b3f075a80e441
 
-	
 ############################################################
 # Download, verify and extract Java
 ############################################################
 
 RUN  yum -y update \
-  && yum -y install zip unzip \
+  && yum -y install unzip \
   && yum clean all \
 
   && curl -kLOH "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" \
@@ -46,8 +45,8 @@ RUN  yum -y update \
 # Set environment
 ############################################################
 
-ENV JAVA_HOME /opt/jdk
-ENV PATH ${PATH}:${JAVA_HOME}/bin
+ENV JAVA_HOME=/opt/jdk \
+    PATH ${PATH}:${JAVA_HOME}/bin
 
 VOLUME [ "/opt/jdk"]
 
