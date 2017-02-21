@@ -13,10 +13,10 @@ MAINTAINER 21plus2
 ############################################################
 
 ENV JAVA_VERSION_MAJOR 8
-ENV JAVA_VERSION_MINOR 77
-ENV JAVA_VERSION_BUILD 03
+ENV JAVA_VERSION_MINOR 121
+ENV JAVA_VERSION_BUILD 13
 ENV JAVA_PACKAGE       server-jre
-ENV JAVA_CHECKSUM      32f19f3a0fb872f363689c85321e0021
+ENV JAVA_CHECKSUM      42b04aeb39aeec7ba1d0ce907b2d7f56
 
 ############################################################
 # Download, verify and extract Java
